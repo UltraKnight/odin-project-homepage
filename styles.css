@@ -175,8 +175,8 @@ p {
   }
 
   .projects {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
 
     .card {
@@ -184,14 +184,13 @@ p {
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      width: 300px;
       gap: 20px;
-      width: 100%;
-      margin: 0 40px;
+      margin: 0 auto;
       padding-bottom: 90px;
       box-shadow: 3px 3px 10px grey;
 
       @media screen and (min-width: 768px) {
-        margin: 0 auto;
         max-width: 300px;
       }
 
@@ -209,8 +208,8 @@ p {
         justify-content: space-between;
         align-items: center;
         margin-bottom: 15px;
-        margin-left: 10px;
-        padding-inline: 20px;
+        padding-left: 30px;
+        padding-right: 20px;
 
         .icons {
           display: flex;
