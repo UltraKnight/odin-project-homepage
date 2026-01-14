@@ -45,6 +45,7 @@ h2 {
 
 h3 {
   font-size: 28px;
+  font-weight: 500;
 }
 
 p {
@@ -62,6 +63,7 @@ p {
 
   @media screen and (min-width: 768px) {
     padding: 50px;
+    padding-bottom: 0;
   }
 }
 
@@ -234,6 +236,87 @@ p {
             width: 30px;
             height: 30px;
           }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: relative;
+  background-color: SteelBlue;
+  width: 100%;
+
+  .footer {
+    padding-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    .footer-text {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+
+      @media screen and (min-width: 768px) {
+        align-items: flex-start;
+      }
+
+      h3, p {
+        color: white;
+      }
+
+      h3 {
+        text-align: center;
+        margin-bottom: 10px;
+
+        @media screen and (min-width: 768px) {
+          text-align: left;
+        }
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+
+      .contact {
+        display: grid;
+        grid-template-areas: "a b ";
+        grid-template-columns: max-content;
+        gap: 10px;
+      }
+
+      .social-media {
+        display: flex;
+        gap: 20px;
+      }
+    }
+
+    .footer-image {
+      align-self: flex-end;
+
+      img {
+        vertical-align: bottom; // avoid extra space under the image
+        height: auto;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+          margin: 30px;
+          margin-bottom: 60px;
+          height: 250px;
+          width: auto;
+        }
+
+        @media screen and (min-width: 1024px) {
+          height: 400px;
         }
       }
     }
