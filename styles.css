@@ -56,6 +56,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
   height: 100%;
   max-width: 1920px;
 
@@ -65,7 +66,6 @@ p {
 }
 
 .header {
-  padding: 20px;
   width: 100%;
 
   @media screen and (min-width: 1023px) {
@@ -109,6 +109,7 @@ p {
   .about-me {
     position: relative;
     background-color: white;
+    flex: 1;
     padding: 15px 30px;
     margin-top: 30px;
     height: 300px;
@@ -171,7 +172,7 @@ p {
   width: 100%;
   margin-top: 100px;
 
-  h2 {
+ h2 {
     margin-bottom: 30px;
 
     @media screen and (min-width: 768px) {
@@ -181,9 +182,11 @@ p {
   }
 
   .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 30px;
     margin-bottom: 60px;
 
     .card {
@@ -191,14 +194,15 @@ p {
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      width: 300px;
+      width: 100%;
+      margin-inline: 40px;
       gap: 20px;
-      margin: 0 auto;
       padding-bottom: 90px;
       box-shadow: 3px 3px 10px grey;
 
       @media screen and (min-width: 768px) {
-        max-width: 300px;
+        margin-inline: 0;
+        width: 300px;
       }
 
       img {
